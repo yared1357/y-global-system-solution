@@ -1,0 +1,19 @@
+
+  /* Default carousel image height */
+  .carousel-inner img {
+    height: 590px;
+  }
+
+  /* Tablet view */
+  @media (max-width: 991px) {
+    .carousel-inner img {
+      height: 400px;
+    }
+  }
+
+  /* Mobile view */
+  @media (max-width: 576px) {
+    .carousel-inner img {
+      height: 300px;
+    }
+  }

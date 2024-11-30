@@ -1,0 +1,59 @@
+.container {
+  margin-top: 50px;
+}
+
+/* Contact info section styles */
+.contact-info {
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Flexbox layout for contact details */
+.contact-info .icon {
+  font-size: 32px;
+  color: #1f7091;
+  margin-right: 10px;
+}
+
+/* Title and text styles */
+.contact-info .info-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact-info .info-text {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Form container styles */
+.form-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Responsive styles for the map container */
+.map-container {
+  margin-top: 20px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .contact-info,
+  .form-container {
+    width: 100%;
+  }
+
+  .contact-info .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

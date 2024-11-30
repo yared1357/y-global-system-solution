@@ -1,0 +1,30 @@
+.footer {
+  background-color: #095384; /* Use the specified background color */
+  padding: 20px 0; /* Add padding for top and bottom spacing */
+  color: white; /* Ensure text color contrasts well with the background */
+}
+
+.footer h2, .footer h4 {
+  margin-bottom: 15px; /* Add spacing below headings */
+}
+
+.footer a {
+  color: white; /* Set link color to white */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Underline links on hover for better UX */
+}
+
+.footer-bottom {
+  border-top: 1px solid #555; /* Keep the top border */
+  padding-top: 10px; /* Add padding for spacing */
+  text-align: center; /* Center align text */
+  margin-top: 15px; /* Add margin for spacing above */
+}
+
+/* Center align text in each column */
+.text-center {
+  text-align: center;
+}
