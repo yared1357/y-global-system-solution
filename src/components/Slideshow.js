@@ -4,11 +4,9 @@ import './Slideshow.css'; // Import your CSS file
 
 // Import images
 import slide1 from '../assets/slide1.jpg';
-import slide2 from '../assets/slide2.png';
+import slide2 from '../assets/slide2.jpg';
 import slide3 from '../assets/slide3.jpg';
-import slide4 from '../assets/slide4.jpg';
-import slide5 from '../assets/slide5.jpg';
-import slide6 from '../assets/slide6.jpg';
+import slide4 from'../assets/slide4.png';
 
 const Slideshow = () => {
   return (
@@ -25,12 +23,6 @@ const Slideshow = () => {
         </div>
         <div className="carousel-item">
           <img src={slide4} className="d-block w-100" alt="Slide 4" />
-        </div>
-        <div className="carousel-item">
-          <img src={slide5} className="d-block w-100" alt="Slide 5" />
-        </div>
-        <div className="carousel-item">
-          <img src={slide6} className="d-block w-100" alt="Slide 6" />
         </div>
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

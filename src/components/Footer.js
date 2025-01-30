@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap is imported
 import './Footer.css'; // Import your CSS file
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear(); // Get the current year
+
   return (
     <footer className="footer">
       <div className="container">
@@ -25,6 +27,7 @@ const Footer = () => {
             <h4>Contact Us</h4>
             <p>Email: <a href="mailto:yared1357@gmail.com" className="text-white">yared1357@gmail.com</a></p>
             <p>Phone: <a href="tel:+251926862255" className="text-white">+251 926-862-255</a></p>
+            <p>Address: Ethiopia, Addis Ababa</p>
           </div>
         </div>
         <div className="row text-center">
@@ -42,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom text-center mt-3 border-top pt-3">
-          <p>CopyRight &copy; 2024 Y-Global Web Solution. All rights reserved.</p>
+          <p>CopyRight &copy; {currentYear} Y-Global System Solution. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,101 +1,114 @@
-import React from 'react';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import React, { useState } from "react";
+import './Contact.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
-  return (
-    <div className="container my-5">
-      <div className="row">
-        {/* Map Section */}
-        <div className="my-5">
-          <h4 className="text-center">Find Us Here</h4>
-          <div className="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.993195138948!2d-89.20013478520356!3d48.45915177929823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b3be68f4b2e7e1%3A0x22d7b0f0cc9e8b3c!2sAddis%20Ababa!5e0!3m2!1sen!2set!4v1635144828498!5m2!1sen!2set"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
-          </div>
-        </div>
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+    });
 
-        {/* Contact Info */}
-        <div className="col-lg-4 col-md-12 mb-4">
-          <div className="p-5 rounded shadow-sm contact-info">
-            <div className="d-flex align-items-center mb-5">
-              <FaMapMarkerAlt className="icon" />
-              <div>
-                <h5 className="info-title">Address</h5>
-                <p className="info-text">Ethiopia, Addis Ababa</p>
-              </div>
-            </div>
-            <div className="d-flex align-items-center mb-5">
-              <FaPhoneAlt className="icon" />
-              <div>
-                <h5 className="info-title">Call Us</h5>
-                <p className="info-text">+251-926-862-255</p>
-              </div>
-            </div>
-            <div className="d-flex align-items-center">
-              <FaEnvelope className="icon" />
-              <div>
-                <h5 className="info-title">Email Us</h5>
-                <p className="info-text">yared1357@gmail.com</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
 
-        {/* Contact Form */}
-        <div className="col-lg-8 col-md-12">
-          <div className="p-5 bg-white rounded shadow-sm form-container">
-            <form>
-              <div className="row mb-4">
-                <div className="col-md-6 mb-3 mb-md-0">
-                  <input type="text" className="form-control" placeholder="Your Name" required />
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Form submitted:", formData);
+        setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: ""
+        });
+    };
+
+    return (
+        <div className="container">
+            <div className="frame">
+                <iframe 
+                    title="Contact Form"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31524.66191018823!2d38.704367274316404!3d9.01048630000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85da18e1b723%3A0x42d08092ca9eea40!2sMexico%20Square!5e0!3m2!1sen!2set!4v1734155171306!5m2!1sen!2set" 
+                    style={{ border: 0, width: '100%', height: '500px' }} 
+                    allowFullScreen
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div className="contact">
+                <div className="contact-content">
+                    <h2>Need help?</h2>
+                    <h3>
+                        <FontAwesomeIcon icon={faMapMarkerAlt} /> 
+                        Address: Addis Ababa, Ethiopia
+                    </h3>
+                    <h3>
+                        <FontAwesomeIcon icon={faPhone} /> 
+                        Phone: <a href="tel:+251926862255">+251 926862255</a>
+                    </h3>
+                    <h3>
+                        <FontAwesomeIcon icon={faEnvelope} /> 
+                        Email: <a href="mailto:yared123@gmail.com">yared123@gmail.com</a>
+                    </h3>
                 </div>
-                <div className="col-md-6">
-                  <input type="email" className="form-control" placeholder="Your Email" required />
+
+                <div className="contact-container">
+                    <h2>Contact Me!</h2>
+                    <form onSubmit={handleSubmit}>
+                        <div>
+                            <label htmlFor="name">Name:</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="email">Email:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="phone">Phone:</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="message" className="message">Message:</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                            ></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
                 </div>
-              </div>
-              <div className="mb-4">
-                <input type="text" className="form-control" placeholder="Subject" required />
-              </div>
-              <div className="mb-4">
-                <textarea className="form-control" rows="4" placeholder="Message" required></textarea>
-              </div>
-              <button
-                type="submit"
-                className="btn btn-primary px-5"
-                style={{
-                  backgroundColor: '#1f7091',
-                  border: 'none',
-                  color: 'white',
-                  padding: '12px 30px',
-                  fontSize: '16px',
-                  borderRadius: '25px',
-                  transition: 'background-color 0.3s, transform 0.3s',
-                  boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.backgroundColor = '#155a73';
-                  e.currentTarget.style.transform = 'scale(1.05)';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.backgroundColor = '#1f7091';
-                  e.currentTarget.style.transform = 'scale(1)';
-                }}
-              >
-                Send
-              </button>
-            </form>
-          </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Contact;

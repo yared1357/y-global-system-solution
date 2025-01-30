@@ -14,7 +14,7 @@ const Home = () => {
             <img src={heroImage} alt="Web Development" className="img-fluid rounded" />
           </div>
           <div className="col-md-6">
-            <h1 className="display-4">Welcome to Y-Global Web Solution</h1>
+            <h2>Welcome to Y-Global System Solution</h2>
             <p className="lead">We are very eager to make your dream a reality. We are well-known for developing highly responsive and fully functional websites for our customers. If you have any idea, we are ready to bring your ideas to life.</p>
             <p>At Y-Global, we specialize in delivering high-quality web development and design services tailored to meet your unique needs.</p>
             <p>From responsive web design to custom application development, our team of experts is dedicated to bringing your vision to life.</p>
