@@ -90,7 +90,7 @@ body {
 
 @media (max-width: 576px){
   .title-font{
-    font-size: 0.6rem;
+    font-size: 2px;
     color:white;
   } 
 }
