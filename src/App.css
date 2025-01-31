@@ -89,11 +89,11 @@ body {
 }
 
 @media (max-width: 468px) {
-  .title-font{
-    font-size: 0.6rem;
-    color:white;
+  .title-font {
+    font-size: 1.2rem; /* Adjusted for better visibility */
+    color: white;
     margin-left: 0;
-  } 
+  }
 }
 @media (max-width: 768px){
   .title-font{
