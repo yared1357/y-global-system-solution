@@ -82,3 +82,20 @@ body {
     display: flex; /* Show the navigation links when menu is toggled */
   }
 }
+.title-font{
+  font-size: 2.0rem;
+  color:white;
+  text-decoration: none;
+}
+
+@media (max-width: 576px){
+  .title-font{
+    font-size: 1.0rem;
+    color:white;
+  } 
+}
+@media (max-width: 768px){
+  .title-font{
+    font-size: 1.6rem;
+  }
+}
