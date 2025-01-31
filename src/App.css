@@ -1,102 +1,18 @@
-/* src/App.css */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-.nav {
+.navbar {
   display: flex;
-  align-items: center;
-  height: 100px; /* Set the height to 100px */
-  padding: 0 20px; /* Adjust padding as needed */
-  background-color: #1f7091; /* Background color */
-  border-bottom: 1px solid #e0e0e0;
-  position: relative; /* To position the hamburger icon properly */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between title and toggler */
 }
 
-.brand {
-  color: white; /* Brand name color */
-  font-size: 18px; /* Adjust font size to fit within the height */
-  font-weight: bold; /* Make the brand name bold */
-  flex-grow: 1; /* Takes up available space to push the nav to the right */
-}
-
-.icon {
-  display: none; /* Hidden by default, shown on smaller screens */
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-
-.nav-links {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  justify-content: flex-end; /* Moves the navigation to the right */
-  align-items: center; /* Vertically centers the nav items */
-}
-
-.nav-links li {
-  margin-left: 20px; /* Adjust margin to fit within height */
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white; /* Optional: makes the link text white for better contrast */
-  line-height: 50px; /* Vertically centers the text in each nav item */
-}
-
-.nav-links.open {
-  display: flex; /* Show the navigation links when menu is toggled */
-  flex-direction: column;
-  position: absolute;
-  top: 50px; /* Position below the nav bar */
-  right: 0;
-  background-color: #1f7091;
-  width: 100%;
-  z-index: 1;
-}
-
-.nav-links.open li {
-  padding: 10px 20px;
-  border-bottom: 1px solid #fff;
-}
-
-.nav-links.open a {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .icon {
-    display: block; /* Show the hamburger icon on small screens */
-  }
-
-  .nav-links {
-    display: none; /* Hide the navigation links by default */
-  }
-
-  .nav-links.open {
-    display: flex; /* Show the navigation links when menu is toggled */
-  }
-}
-.title-font{
+.title-font {
   font-size: 2.0rem;
-  color:white;
+  color: white;
   text-decoration: none;
 }
 
-@media (max-width: 468px) {
+/* Ensure responsive adjustments */
+@media (max-width: 768px) {
   .title-font {
-    font-size: 1.2rem; /* Adjusted for better visibility */
-    color: white;
-    margin-left: 0;
-  }
-}
-@media (max-width: 768px){
-  .title-font{
     font-size: 1.6rem;
   }
 }

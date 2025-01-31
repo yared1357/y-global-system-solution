@@ -18,28 +18,28 @@ const App = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#095384',paddingLeft:'30px'}}> {/* Set the background color */}
-        <div className="container-fluid">
-          <p className="title-font">Y-Global System Solution</p>
+      <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#095384', padding: '0 30px' }}>
+        <div className="container-fluid d-flex justify-content-between align-items-center">
+          <p className="title-font mb-0">Y-Global System Solution</p>
           <button className="navbar-toggler" type="button" onClick={toggleMenu} aria-expanded={isMenuOpen} aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`}>
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0"> {/* Use ms-auto to align to the right */}
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link text-white"  style={{ fontSize: '22px',paddingRight:'40px' }} href="/">Home</a>
+                <a className="nav-link text-white" style={{ fontSize: '22px', paddingRight: '40px' }} href="/">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white"  style={{ fontSize: '22px' ,paddingRight:'40px'}} href="/about">About</a>
+                <a className="nav-link text-white" style={{ fontSize: '22px', paddingRight: '40px' }} href="/about">About</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white" style={{ fontSize: '22px' ,paddingRight:'40px'}} href="/gallery">Gallery</a>
+                <a className="nav-link text-white" style={{ fontSize: '22px', paddingRight: '40px' }} href="/gallery">Gallery</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white" style={{ fontSize: '22px' ,paddingRight:'40px' }} href="/service">Service</a>
+                <a className="nav-link text-white" style={{ fontSize: '22px', paddingRight: '40px' }} href="/service">Service</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white" style={{ fontSize: '22px' ,paddingRight:'40px'}} href="/contact">Contact</a>
+                <a className="nav-link text-white" style={{ fontSize: '22px', paddingRight: '40px' }} href="/contact">Contact</a>
               </li>
             </ul>
           </div>
