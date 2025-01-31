@@ -20,7 +20,7 @@ const App = () => {
     <div>
       <nav className="navbar navbar-expand-lg" style={{ backgroundColor: '#095384',paddingLeft:'30px'}}> {/* Set the background color */}
         <div className="container-fluid">
-          <p className="title-font">Y-Global System Solutionnnn</p>
+          <p className="title-font">Y-Global System Solution</p>
           <button className="navbar-toggler" type="button" onClick={toggleMenu} aria-expanded={isMenuOpen} aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
