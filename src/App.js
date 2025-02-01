@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home';
 import About from './components/About';
-import Gallery from './components/Gallery';
 import Service from './components/Service';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -33,9 +32,6 @@ const App = () => {
                 <a className="nav-link text-white" style={{ fontSize: '22px', paddingRight: '40px' }} href="/about">About</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white" style={{ fontSize: '22px', paddingRight: '40px' }} href="/gallery">Gallery</a>
-              </li>
-              <li className="nav-item">
                 <a className="nav-link text-white" style={{ fontSize: '22px', paddingRight: '40px' }} href="/service">Service</a>
               </li>
               <li className="nav-item">
@@ -50,7 +46,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/gallery" element={<Gallery />} />
           <Route path="/service" element={<Service />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

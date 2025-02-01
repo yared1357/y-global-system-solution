@@ -18,7 +18,6 @@ const Footer = () => {
             <ul className="list-unstyled">
               <li><a href="/" className="text-white text-decoration-none">Home</a></li>
               <li><a href="/about" className="text-white text-decoration-none">About</a></li>
-              <li><a href="/gallery" className="text-white text-decoration-none">Gallery</a></li>
               <li><a href="/service" className="text-white text-decoration-none">Service</a></li>
               <li><a href="/contact" className="text-white text-decoration-none">Contact</a></li>
             </ul>
