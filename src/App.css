@@ -13,6 +13,6 @@
 /* Ensure responsive adjustments */
 @media (max-width: 768px) {
   .title-font {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
