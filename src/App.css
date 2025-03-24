@@ -10,9 +10,23 @@
   text-decoration: none;
 }
 
+/* New styles for navigation items */
+.nav-item {
+  font-family: Georgia, 'Times New Roman', Times, serif;/* Replace with your desired font family */
+  font-size: 1.5rem; /* Font size for nav items */
+  color: white; /* Text color for nav items */
+  margin: 0 20px; /* Spacing between items */
+  text-decoration: none; /* Remove underline from links */
+}
+
 /* Ensure responsive adjustments */
 @media (max-width: 768px) {
   .title-font {
     font-size: 1.1rem;
+  }
+
+  .nav-item {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    margin: 0 10px; /* Reduce spacing for mobile */
   }
 }
