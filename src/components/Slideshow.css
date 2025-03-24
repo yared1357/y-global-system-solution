@@ -17,3 +17,14 @@
       height: 300px;
     }
   }
+/* Remove hover background color for carousel controls */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: transparent; /* Removes the blue background */
+}
+
+/* Optionally, remove outline on focus */
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+    outline: none; /* Prevents focus outline */
+}
